@@ -10,6 +10,14 @@ O projeto utiliza o **ThingSpeak** (plataforma de IoT mantida pela MathWorks, me
 
 **3. Integração simples e de baixo custo.** O plano gratuito do ThingSpeak permite até 3 milhões de mensagens por ano (mais do que suficiente para uma demonstração pontual) e é acessado por uma API REST simples via HTTP, sem necessidade de bibliotecas complexas ou configuração de servidor próprio. Existe ainda uma biblioteca oficial (`ThingSpeak.h`) mantida pela própria MathWorks e compatível com o ambiente Arduino/ESP32, o que reduz o tempo de desenvolvimento.
 
+## Comparação com as Demais Opções
+
+- **Adafruit IO:** também oferece dashboards e feeds gratuitos, e seria uma alternativa viável; porém, o ThingSpeak tem uma curva de aprendizado mais direta para o caso específico de poucos campos numéricos com foco em gráficos de série temporal, que é exatamente o que o projeto precisa.
+- **Blynk:** é voltado principalmente para controle e visualização via aplicativo mobile personalizável, com foco maior em interação/controle do que em histórico gráfico — o projeto já resolve a parte de consulta imediata com o painel web embutido no ESP32, então o diferencial do Blynk não agrega tanto quanto o histórico gráfico do ThingSpeak.
+- **Firebase:** é um banco de dados em tempo real completo, poderoso, mas exige mais configuração (criação de projeto no console do Google, regras de segurança, SDKs) para um ganho que, na escala deste projeto (três sensores, um evento de demonstração), não compensa a complexidade adicional.
+- **MQTT Broker próprio (Mosquitto):** exigiria um segundo dispositivo (como um Raspberry Pi) hospedando o broker, o que aumenta custo, complexidade de montagem e pontos de falha — incompatível com a proposta de solução simples e de baixo custo do projeto.
+- **Ubidots:** tem um plano educacional gratuito interessante e também seria funcional, mas com menos documentação em português e exemplos prontos para ESP32 do que o ThingSpeak, o que pesa em um projeto com prazo definido.
+
 ## Bot do Telegram — Detalhamento Técnico
 
 **Criação e autenticação do bot.** O bot é criado gratuitamente através do **BotFather**, um bot oficial do próprio Telegram usado para registrar novos bots e gerar o **token de acesso** (uma string única que identifica e autentica o bot perante a API). Esse token deve ser mantido em segredo no firmware, já que qualquer pessoa que o possua pode enviar mensagens em nome do bot. Além do token, é necessário obter o **`chat_id`** do grupo, canal ou conversa individual para onde os alertas serão enviados — um identificador numérico único que pode ser descoberto enviando uma mensagem ao bot e consultando o endpoint `getUpdates` da API uma única vez, durante a configuração inicial.
