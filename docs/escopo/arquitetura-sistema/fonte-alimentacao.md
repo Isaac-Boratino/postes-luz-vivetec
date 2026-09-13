@@ -18,7 +18,7 @@ A alimentação via USB é, portanto, a opção que minimiza pontos de falha, di
 
 ## Consumo Estimado do Sistema
 
-O consumo do sistema é determinado principalmente pelo ESP32 operando com o rádio Wi-Fi ativo continuamente, já que ele precisa manter três frentes de comunicação simultâneas (painel web local, envio periódico ao ThingSpeak e alerta via Telegram quando há falha). Esse consumo fica na faixa de 80 mA a 160 mA em operação normal, com picos de até 260 mA durante transmissões de dados. Os LEDs consomem poucos miliamperes cada (limitados pelos resistores de 220 Ω), e o buzzer, quando acionado, adiciona um consumo pontual e breve, apenas nos momentos de alerta. Somando todos os componentes, o consumo total do sistema fica com folga dentro da capacidade de uma porta USB padrão (5V/500mA a 900mA) ou de um carregador de celular comum (5V/1A ou mais), confirmando que nenhuma fonte externa adicional é necessária para o funcionamento da maquete.
+O consumo do sistema é determinado principalmente pelo ESP32 operando com o rádio Wi-Fi ativo continuamente, já que ele precisa manter o envio periódico dos dados ao ThingSpeak. Esse consumo fica na faixa de 80 mA a 160 mA em operação normal, com picos de até 260 mA durante transmissões de dados. Os LEDs consomem poucos miliamperes cada (limitados pelos resistores de 220 Ω), e o buzzer, quando acionado, adiciona um consumo pontual e breve, apenas nos momentos de alerta. Somando todos os componentes, o consumo total do sistema fica com folga dentro da capacidade de uma porta USB padrão (5V/500mA a 900mA) ou de um carregador de celular comum (5V/1A ou mais), confirmando que nenhuma fonte externa adicional é necessária para o funcionamento da maquete.
 
 ## Considerações para uma Aplicação Real
 

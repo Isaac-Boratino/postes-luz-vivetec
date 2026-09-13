@@ -62,11 +62,11 @@ Desenvolver, em uma maquete com ESP32, um sistema de baixo custo que identifique
 ### Objetivos específicos
 1. Desenvolver um sistema de monitoramento de postes de iluminação pública utilizando ESP32 e sensores LDR, capaz de identificar automaticamente falhas (poste apagado, queimado ou aceso fora do horário correto) sem intervenção humana;
 2. Reduzir o tempo de detecção de falhas de dias/semanas (tempo médio de um modelo reativo, dependente de denúncia do morador) para poucos segundos, através da comparação contínua entre a leitura do LDR e o horário sincronizado via protocolo NTP;
-3. Notificar automaticamente o responsável pela manutenção em tempo real, via bot do Telegram, eliminando a necessidade de o cidadão registrar uma reclamação manual para que o reparo seja iniciado;
+3. Notificar automaticamente o responsável pela manutenção em tempo real, via ThingSpeak Alerts, eliminando a necessidade de o cidadão registrar uma reclamação manual para que o reparo seja iniciado;
 4. Viabilizar uma alternativa de baixo custo (em torno de R$70-90 em componentes) à telegestão comercial de iluminação pública, que exige investimentos altos e contratos de longo prazo, tornando a detecção automática de falhas acessível também a municípios ou contextos com orçamento limitado;
 5. Disponibilizar um histórico de dados de luminosidade de cada poste, via ThingSpeak, permitindo à equipe de manutenção visualizar padrões de funcionamento ao longo do tempo e apoiar decisões de manutenção preventiva, além da simples notificação pontual de falha;
 6. Simular, na maquete, três postes de luz monitorados individualmente por sensores conectados ao ESP32;
-7. Detectar automaticamente quando um poste tem falha, simulada fisicamente por um botão push-button que interrompe o circuito do LED correspondente;
+7. Detectar automaticamente quando um poste tem falha, simulada fisicamente por uma chave gangorra de 3 posições (ON-OFF-ON) por poste, que alterna a alimentação do LED correspondente entre normal, queimado (sem alimentação) e aceso em horário errado (ligado direto à fonte);
 8. Apresentar o funcionamento do sistema de forma clara e acessível ao público da Feira EPA.
 
 ---

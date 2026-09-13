@@ -1,0 +1,7 @@
+Papel,Integrante,Responsabilidades
+Back-End,Tulio Dias,"Desenvolvimento da logica embarcada no ESP32 (leitura dos sensores LDR); Calibracao dos sensores"
+Back-End,Rafael Alvez,"Controle do buzzer e logica de reforco sonoro; Integracao com o ThingSpeak (envio de dados de luminosidade)"
+Front-End,Victor Eufrasio,"Consumo dos dados vindos do back-end/ThingSpeak para exibicao em tempo real"
+Front-End,Gabriel Moura,"Responsividade e usabilidade para a demonstracao na Etec de Portas Abertas"
+Gestor do Projeto,Isaac Boratino,"Coordenacao geral do cronograma e das entregas do grupo; Organizacao e manutencao do repositorio no GitHub; Elaboracao/consolidacao da documentacao de escopo; Ponto de contato entre a equipe e os professores/avaliadores"
+QA,Cauã Galvão,"Testes funcionais do sistema completo (ESP32, ThingSpeak); Validacao de cenarios de falha; Checagem de consistencia entre os dados exibidos no ThingSpeak; Levantamento de bugs e acompanhamento das correcoes"
