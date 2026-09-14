@@ -1,7 +1,5 @@
 # Planejamento da Montagem da Maquete — Projeto VivEtec
 
-> **Status:** proposta de montagem para avaliação do grupo. As etapas, a ordem e o mapeamento de pinos abaixo são uma sugestão de ponto de partida — a equipe decide se serão seguidas conforme apresentado ou ajustadas conforme os componentes recebidos por patrocínio da escola.
-
 ## Como Montar a Maquete — Visão Geral
 
 A maquete representa 3 postes de iluminação pública, cada um com:
